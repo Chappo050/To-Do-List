@@ -4,7 +4,7 @@ function createNewTDBtn(TDLogic) {
     addTDBtn.addEventListener('click', TDLogic)
 }
 
-function deleteTDBtn(params) {
+function deleteTDBtn(item) {
     
 }
 

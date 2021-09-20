@@ -7,14 +7,26 @@ function refreshDisplay(array) {
 function displayTD(array) {
 
     //clear all items
-    const container = document.getElementById('listContainer');
-    while(container.firstChild){
-        container.removeChild(container.firstChild);
+    const toDoContainer = document.getElementById('toDoContainer');
+    const doingContainer = document.getElementById('doingContainer');
+    const doneContainer = document.getElementById('doneContainer');
+
+    while(toDoContainer.firstChild){
+        toDoContainer.removeChild(toDoContainer.firstChild);
+    }
+
+    while(doingContainer.firstChild){
+        doingContainer.removeChild(doingContainer.firstChild);
+    }
+    
+    while(doneContainer.firstChild){
+        doneContainer.removeChild(doneContainer.firstChild);
     }
 
     //add all items back in
     array.forEach(element => {
 
+      
         //Items div
         const newItem = document.createElement('div');
         newItem.classList.add('TDItem');
@@ -40,7 +52,19 @@ function displayTD(array) {
         newItem.appendChild(itemDue);
         newItem.appendChild(itemPriority);
         newItem.appendChild(itemNote);
-        container.appendChild(newItem)
+
+
+        if (element.status == 0){
+            toDoContainer.appendChild(newItem)
+        }
+        else if (element.status == 1){
+            doingContainer.appendChild(newItem)
+        }
+        else if (element.status == 2){
+            doneContainer.appendChild(newItem)
+        }
+
+        
     });
 }
 

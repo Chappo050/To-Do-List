@@ -1,5 +1,5 @@
 import './style.css';
-import { newTD } from './createNewTD';
+import { newTD } from './itemManager';
 import { createNewTDBtn } from './btnLogic';
 
 function component(){

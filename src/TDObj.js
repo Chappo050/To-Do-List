@@ -1,5 +1,6 @@
-function ToDo(title, description, due, priority, note){
+function ToDo(title, status, description, due, priority, note){
         this.title = title;
+        this.status = status;
         this.description = description;
         this.due = due;
         this.priority = priority;

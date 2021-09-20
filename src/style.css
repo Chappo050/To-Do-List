@@ -1,14 +1,52 @@
-html, body{
+html{
     margin: 0;
     padding: 0;
-    background: #580aa0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background:whitesmoke
 }
 
+h1{
+    font-size: 35px;
+    text-align: center;
+}
 .TDItem{
-    border-radius: 40px;
+    border-radius: 30px;
     border: 2px solid #2a044e;
-    padding: 20px;
+    padding: 10px;
     width: 400px;
     height: auto; 
     margin: 10px;
+    text-align: center;
+}
+
+.TDColumn{
+    padding: 10px;
+    margin: 10px;
+    max-width: 450px;
+}
+
+#listContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'toDo doing done';
+    margin: 50px;
+}
+
+#toDoContainer{
+    grid-area: toDo;
+    background: rgba(255, 0, 0, 0.600);
+}
+
+#doingContainer{
+    grid-area: doing;
+    background: rgba(255, 255, 0, 0.600);
+}
+
+#doneContainer{
+    grid-area: done;
+    background: rgba(0, 128, 0, 0.7600)
 }
