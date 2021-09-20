@@ -13,6 +13,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'To Do List',
+      template: './src/index.html',
     }),
   ],
   output: {
@@ -20,7 +21,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-
   module: {
     rules: [
       {

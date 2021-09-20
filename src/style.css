@@ -1,0 +1,14 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background: #580aa0;
+}
+
+.TDItem{
+    border-radius: 40px;
+    border: 2px solid #2a044e;
+    padding: 20px;
+    width: 400px;
+    height: auto; 
+    margin: 10px;
+}
