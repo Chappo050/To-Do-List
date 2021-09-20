@@ -10,8 +10,34 @@
 
       <h1>Project Name</h1>
         <div id="TDButtons">
-            <button id="addTDBtn">+</button>
-            <button id="addTDBtn">-</button>
+          <button id="addTDBtn">+</button>
+          <button class="open-button" id="popupAdd">Add Item</button>
+          <div class="form-popup" id="myForm">
+            <form  class="form-container">
+              <h2>Add Item</h2>
+          
+              <label for="title"><b>Title</b></label>
+              <input type="text" placeholder="Enter Title" name="title" required>
+          
+              <label for="status"><b>Status</b></label>
+              <input type="text" placeholder="Enter Status" name="status" required>
+
+              <label for="desc"><b>Description</b></label>
+              <input type="text" placeholder="Enter Description" name="desc" required>
+          
+              <label for="due"><b>Due</b></label>
+              <input type="text" placeholder="Enter Due Date" name="due" required>
+
+              <label for="priority"><b>Priority</b></label>
+              <input type="text" placeholder="Enter Priority" name="priority" required>
+
+              <label for="note"><b>Notes</b></label>
+              <input type="text" placeholder="Enter Notes" name="note" required>
+
+              <button type="submit" class="btn">ADD</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div> 
         </div>
 
         <div id="listContainer">
