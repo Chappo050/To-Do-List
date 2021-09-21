@@ -1,10 +1,15 @@
 
-function createNewTDBtn(TDLogic) {
-    const addTDBtn = document.getElementById('addTDBtn')
-    addTDBtn.addEventListener('click', TDLogic)
+function loadButtons(TDLogic) {
+    const addItemBtn = document.getElementById('addItemBtn')
+    addItemBtn.addEventListener('click', TDLogic)
+
     const popupAdd = document.getElementById('popupAdd')
     popupAdd.addEventListener('click', openForm);
+
+    const closeBtn = document.getElementById('closeBtn')
+    closeBtn.addEventListener('click', closeForm);
 }
+
 
 function deleteTDBtn(item) {
     
@@ -12,6 +17,7 @@ function deleteTDBtn(item) {
 
 function openForm() {
     document.getElementById("myForm").style.display = "block";
+
   }
   
   function closeForm() {
@@ -19,4 +25,4 @@ function openForm() {
   } 
 
 
-export {createNewTDBtn}
+export {loadButtons, closeForm}

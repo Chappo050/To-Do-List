@@ -1,9 +1,9 @@
 import './style.css';
 import { newTD } from './itemManager';
-import { createNewTDBtn } from './btnLogic';
+import { loadButtons } from './btnLogic';
 
 function component(){
-    createNewTDBtn(newTD);
+    loadButtons(newTD);
 }
 
 component();
